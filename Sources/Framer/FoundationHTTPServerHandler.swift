@@ -25,7 +25,7 @@ import Foundation
 public class FoundationHTTPServerHandler: HTTPServerHandler {
     var buffer = Data()
     weak var delegate: HTTPServerDelegate?
-    let getVerb: NSString = "GET"
+    let getVerb: CFString = "GET" as CFString
     
     public func register(delegate: HTTPServerDelegate) {
         self.delegate = delegate
